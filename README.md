@@ -1,3 +1,3 @@
 # sara-marca-module-i
 
-`gh-pages` enabled.
+`gh-pages` re-enabled.
