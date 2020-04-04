@@ -1,7 +1,7 @@
 /* Slider styling */
 .sliderCont {
-  width: 2400px;
-  height: 584px;
+  width: 1280px;
+  height: 285px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -9,8 +9,8 @@
 }
 
 .threeImgCont {
-  width: 2400px;
-  height: 600px;
+  width: 1280px;
+  height: 285px;
   position: relative;
   transition: left 2s;
   -webkit-transition: left 2s;
@@ -36,12 +36,12 @@
   background-color: white;
 }
 
-#sliderImg1 :target ~ .imgCont {
+#sliderImg1:target ~ .threeImgCont {
   left: 0px;
 }
-#sliderImg2 :target ~ .imgCont {
-  left: 0px;
+#sliderImg2:target ~ .threeImgCont {
+  left: -1280px;
 }
-#sliderImg3 :target ~ .imgCont {
-  left: 0px;
+#sliderImg3:target ~ .threeImgCont {
+  left: -2560px;
 }
