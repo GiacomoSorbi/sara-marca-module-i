@@ -1,0 +1,47 @@
+/* Slider styling */
+.sliderCont {
+  width: 2400px;
+  height: 584px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.threeImgCont {
+  width: 2400px;
+  height: 600px;
+  position: relative;
+  transition: left 2s;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+}
+
+.sliderImg {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+.btnCont {
+  top: -20px;
+  position: relative;
+}
+
+.sliderBtn {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#sliderImg1 :target ~ .imgCont {
+  left: 0px;
+}
+#sliderImg2 :target ~ .imgCont {
+  left: 0px;
+}
+#sliderImg3 :target ~ .imgCont {
+  left: 0px;
+}
