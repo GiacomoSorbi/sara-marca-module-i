@@ -1,3 +1,72 @@
+@media screen and (min-width: 600px) {
+  img {
+    max-width: 100%;
+  }
+}
+
+body {
+  background-color: #fafad2;
+  position: relative;
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+}
+
+#topBar {
+  background-color: #000000;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 5em;
+}
+
+.searchBar {
+  width: 25em;
+}
+
+#logoTop {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  position: relative;
+  background-color: #990033;
+  max-width: 100%;
+  height: 3.5em;
+  text-align: center;
+  margin: 0px auto;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  flex: 1;
+  font-family: Arial bold, Helvetica, sans-serif;
+  font-weight: 80%;
+  font-size: 1em;
+  list-style-type: none;
+  text-transform: uppercase;
+  line-height: 3.5em;
+  height: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav a:hover {
+  color: darkgoldenrod;
+  transition: 0.3s background-color;
+}
+
 /* Slider styling */
 .sliderCont {
   width: 1280px;
@@ -18,6 +87,8 @@
 }
 
 .sliderImg {
+  height: auto;
+  max-width: 100%;
   float: left;
   margin: 0px;
   padding: 0px;
@@ -44,4 +115,11 @@
 }
 #sliderImg3:target ~ .threeImgCont {
   left: -2560px;
+}
+
+main {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
