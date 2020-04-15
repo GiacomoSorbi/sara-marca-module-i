@@ -8,11 +8,13 @@
         <link href="./stylesheet.css" type="text/css" rel="stylesheet" />
   <body>
     <header>
+      <!--Black bar with search field + logo + login-->
         <div id="topBar">
           <div class="searchBar">
-            <imput type="search" id="siteSearch" name="Quest" aria-label="Search wines">
-                <button></button>
-            </imput>
+          <form class="searchBar">
+            <input type="search" id="siteSearch" name="Quest" placeholder=" Search wines" required>
+            <button class="srcBtn">Search</button>
+            </form>
           </div>
         <div class="logo">
           <p>
@@ -20,7 +22,14 @@
             <a href="./index.html"></a>
           </p>
         </div>
-    </div>
+        <div class="logIn">
+          <span>
+            <p class="logIn">Sign up</p>
+            <p class="logIn">Log in</p>
+            <p class="logIn">Help</p>
+          </span>
+        </div>
+      </div>
         <!--Main navigation bar-->
         <nav>
           <ul>
@@ -32,6 +41,10 @@
         </nav>
       </header>
       <main>
+        <!--Delivery Ribbon-->
+        <div id="ribbon1">
+          <h3>FREE Standard Delivery with £50 orders</h3>
+        </div>
       <!--slider-->
       <div class="sliderCont">
         <span class="sliderImg1"></span>
@@ -46,29 +59,33 @@
             <a href="#sliderImg2" class="sliderBtn"></a>
             <a href="#sliderImg3" class="sliderBtn"></a>
           </div>
-
         </div>
       </div>
-      <!--Wine typeuttons-->
-      <div id="wtBtns">
-        <button
+      <!--Wine typeButtons-->
+      <div id="buttonContainer">
+        <button>PROSECCO</button>
+        <button>WHITE WINES</button>
+        <button>RED WINES</button>
+        <button></button>
       </div>
     </main>
 
       <!--Footer goes below-->
-      <footer>
-        <div id=footerLx>
+      <footer id="footerBttm">
+        <div class="colFoot1">
         <ul>
           <li>ABOUT US</li>
           <li>USEFUL INFO</li>
           <li>CAREERS</li>
         </ul>
         </div>
-      <div id=footerRx>
-      <span id="social"><img class="IG_icon" src="IG_iconRound.png" alt="Instagram icon"/>
-      <img class="fB_icon" src="FB_iconRound.png" alt="Facebook icon"/>
-      <img class="TW_icon" src="twitter_iconRound.png" alt="Twitter icon"/></span>
-      <p><span>For the facts</span><span: bold>Drinkaware.co.uk</span></p>
+      <div class="colFoot2">
+      <span id="social"><img class="soIcon" src="IG_iconRound.png" alt="Instagram icon"/>
+      <img class="soIcon" src="FB_iconRound.png" alt="Facebook icon"/>
+      <img class="soIcon" src="twitter_iconRound.png" alt="Twitter icon"/></span>
+      <div class="colFoot3">
+        <p>For the facts Drinkaware.co.uk</p>
+      </div>
     </div>
       </footer>
   </body>
