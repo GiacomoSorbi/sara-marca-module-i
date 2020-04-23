@@ -5,7 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Nonnovino Homepage" />
         <meta name="title" content="Nonnovino Italian wine shop" />
-        <link href="./stylesheet.css" type="text/css" rel="stylesheet" />
+        <link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="shortcut icon" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/favicon.ico/" type="image/x-icon">
+<link rel="icon" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="60x60" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/favicon-16x16.png">
+<link rel="manifest" href="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="Images/e2989bd62cbc2a3f53dfe8dd4965f59b/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
         <script src="https://kit.fontawesome.com/eb3c66bc02.js" crossorigin="anonymous"></script>
   <body>
     <header>
@@ -19,8 +38,8 @@
           </div>
         <div class="logo">
           <p>
-            <img class="logoTop" src="Nonnovino200pxW.png" alt="company logo" />
-            <a href="./index.html"></a>
+            <a href="./index.html"><img class="logoTop" src="Nonnovino200pxW.png" alt="company logo" />
+            </a>
           </p>
         </div>
         <div class="logIn">
@@ -47,14 +66,12 @@
           <h3>FREE Standard Delivery with £50 orders</h3>
         </div>
       <!--slider-->
-      <div class="sliderCont">
-        <span class="sliderImg1"></span>
-        <span class="sliderImg2"></span>
-        <span class="sliderImg3"></span>
-        <div class="threeImgCont">
-          <img class="sliderImg" src="images/offer1Slider.jpg" alt="Monthly offers" />
+      <div id="sliderContainer">
+        <figure class="slider">
+          <!--<img class="sliderImg" src="images/offer1Slider.jpg" alt="Monthly offers" />
           <img class="sliderImg" src="images/offer2Slider.jpg" alt="Malvasia by Cavicchioli offer" />
-          <img class="sliderImg" src="images/offer3Slider.jpg" alt="Ribolla gialla by Vigna Traverso offer" />
+          <img class="sliderImg" src="images/offer3Slider.jpg" alt="Ribolla gialla by Vigna Traverso offer" />-->
+        </figure>
           <div class="btnCont">
             <a href="#sliderImg1" class="sliderBtn"></a>
             <a href="#sliderImg2" class="sliderBtn"></a>
@@ -87,9 +104,37 @@
         <a href="#"><i class="fab fa-twitter-square"></i></i></a>
         </div>
       <div class="col-rightBttm">
-        <span>For the facts<a href="https://drinkaware.co.uk/"> Drinkaware.co.uk</a></span>
+        <span>For the facts<a href="https://drinkaware.co.uk/" target="_blank"> Drinkaware.co.uk</a></span>
       </div>
     </div>
       </footer>
+
+      <!--Javascript bit for the slider-->
+      <script>
+        let i = 0;
+        const slides= [];
+        const time = 3000;
+
+        slides [0] = "images/Offer1Slider.jpg";
+        slides [1] = "images/Offer2Slider.jpg";
+        slides [2] = "images/Offer3Slider.jpg";
+
+        const sliderS = document.querySelector(".slider")
+
+        function slideShow(){
+          const slides1 = document.sliderS = slides[i];
+          if(i < slides1.length -1){
+            i++;
+          } else {
+            i = 0;
+          }
+          // Runs function every x seconds as per const time//
+          setTimeout("slideShow()", time);
+        }
+
+        //Run function when page loads//
+        window.onload = slideShow;
+
+        </script>
   </body>
 </hthml>
