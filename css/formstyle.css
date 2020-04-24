@@ -1,0 +1,21 @@
+form .contactForm {
+  position: relative;
+  max-width: 80%;
+  min-height: 600px;
+  margin: 10px auto;
+  border: 6px solid #ffffff;
+  background: #ffffff;
+}
+
+label input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.contactForm input,
+button,
+textarea {
+  font-family: arial;
+  font-size: 80%;
+  width: 400px;
+}

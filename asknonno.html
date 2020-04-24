@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Nonnovino Homepage" />
         <meta name="title" content="Nonnovino Italian wine shop" />
+        <!-- CSS stylesheets linked here-->
         <link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
+        <link href="css/formstyle.css" type="text/css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/eb3c66bc02.js" crossorigin="anonymous"></script>
   <body>
     <header>
@@ -42,14 +44,43 @@
         </nav>
       </header>
       <main>
+        <div id="leftContainer"></div>
+        <div id="centralContainer">
           <div class="pageTitle">
           <h1 class="sTitle">CONTACT US</h1>
         </div>
-        <form class="contactForm">
-          
+        <form action="csform.html" method="SEND" class="contactForm">
+          <p><label for="email">Email Address</label><input type="email" name="email" id="email" /></p>
+          <div class="titleP">
+          <p><label for="titleP">Title</label><input list="titlePerson" name="titleP" id="titleP" />
+          <datalist id="titlePerson">
+            <option value="Mr"></option>
+            <option value="Mrs"></option>
+            <option value="Miss"></option>
+            <option value="Ms"></option>
+            <option value="Mr & Mrs"></option>
+          </datalist></p>
+        </div>
+          <p><label for="firstN">First Name</label><input type="text" name="firstN" id="firstN" /></p>
+          <p><label for="lastN">Last Name</label><input type="text" name="lastN" id="lastN" /></p>
+          <p><label for="custNum">Customer N.</label><input type="number" name="custN" id="custNum" /></p>
+          <p><label for="postcode">Postcode</label><input type="text" name="postcode" id="postcode" /></p>
+          <div class="messageP">
+          <p><label for="subject">Subject</label><input list="subjetList" name="subject" id="subject" />
+          <datalist id="subjetList">
+            <option value="Order related"></option>
+            <option value="Payment issues"></option>
+            <option value="Return an Item"></option>
+            <option value="Other"></option>
+          </datalist></p>
+          <p><label for="message"></label><textarea id="message" name="message"rows="10" columns="80">Your message here</textarea></p>
+        </div>
+        <div class="submission">
+          <input type="button" value="SUBMIT">
+        </div>
         </form>
-
-        </form>
+      </div>
+      <div id="rightContainer"></div>
     </main>
 
     <!--Footer goes below-->
