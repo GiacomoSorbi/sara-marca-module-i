@@ -7,8 +7,8 @@
         <meta name="title" content="Nonnovino Italian wine shop" />
         <link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
         <!--Links for favicon!-->
-        <link rel="shortcut icon" href="images/favicon/favicon.ico/" type="image/x-icon">
-        <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico/" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
@@ -83,10 +83,65 @@
       </div>
       <!--Wine typeButtons-->
       <div id="buttonContainer">
-        <button>PROSECCO</button>
-        <button>WHITE WINES</button>
-        <button>RED WINES</button>
-        <button></button>
+        <button class="wineTypeB">SPARKLING WINES</button>
+        <button class="wineTypeB">WHITE WINES</button>
+        <button class="wineTypeB">ROSÉ WINES</button>
+        <button class="wineTypeB">RED WINES</button>
+        <button class="wineTypeB">DESSERT WINES</button>
+      </div>
+      <!-- Bestseller wine section below -->
+      <div id="bestSellContainer">
+        <h1 class="sTitle">BESTSELLERS</h1>
+        <section class="wineRow">
+          <!-- Brunello Il Poggione -->
+          <div class="wineBottle">
+            <p>
+              <img
+                class="wineImg"
+                src="images/wines/BrunelloIlPoggione.jpg"
+                alt="Brunello di Montalcino D.O.C.G. by Il Poggione75cl"
+              /><a href=".index.html"></a>
+            </p>
+            <h4 class="wineName">Brunello di Montalcino D.O.C.G.</h4>
+            <h4 class="producer">Il Poggione</h4>
+            <span class="price">£35.00</span>
+            <span class="size">per bottle</span>
+            <input type="number" id="quantity name="quantity min="1" max="50" step="1" value="1">
+            <input type="submit" value=Add>
+          </div>
+          <!-- Prosecco Sanmartino -->
+          <div class="wineBottle">
+            <p>
+              <img
+                class="wineImg"
+                src="images/wines/Prosecco.jpg"
+                alt="Prosecco extra dry by Sanmartino 75cl"
+              /><a href=".index.html"></a>
+            </p>
+            <h4 class="wineName">Prosecco D.O.C. Extra Dry</h4>
+            <h4 class="producer">Sanmartino</h4>
+            <span class="price">£20.00</span>
+            <span class="size">per bottle</span>
+            <input type="number" id="quantity name="quantity min="1" max="50" step="1" value="1">
+            <input type="submit" value=Add>
+          </div>
+          <!-- Sassolloro Biondi Santi -->
+          <div class="wineBottle">
+            <p>
+              <img
+                class="wineImg"
+                src="images/wines/Sassoalloro.jpg"
+                alt="Sassoalloro Biondi Santi 75cl"
+              /><a href=".index.html"></a>
+            </p>
+            <h4 class="wineName">Sassoalloro</h4>
+            <h4 class="producer">Biondi Santi</h4>
+            <span class="price">£40.00</span>
+            <span class="size">per bottle</span>
+            <input type="number" id="quantity name="quantity min="1" max="50" step="1" value="1">
+            <input type="submit" value=Add>
+          </div>
+        </section>
       </div>
     </main>
 
