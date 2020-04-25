@@ -1,21 +1,68 @@
-form .contactForm {
-  position: relative;
-  max-width: 80%;
-  min-height: 600px;
-  margin: 10px auto;
-  border: 6px solid #ffffff;
+form.contactForm {
+  display: inline-flexbox;
+  margin-left: -14em;
+  padding: 1em;
   background: #ffffff;
 }
 
-label input {
-  -webkit-appearance: none;
-  appearance: none;
+div.inputRow {
+  margin: 0.7em;
 }
 
-.contactForm input,
-button,
+input,
 textarea {
-  font-family: arial;
-  font-size: 80%;
-  width: 400px;
+  width: 30em;
+}
+
+.inputRow input[type="text"],
+.inputRow input[type="email"],
+.inputRow select,
+.inputRow textarea {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 0;
+  padding: 0.3em;
+}
+
+.inputRow textarea {
+  height: 12em;
+}
+
+.inputRow input[type="button"] {
+  border: 3px solid #55021e;
+  background-color: #990033;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: 600;
+  width: 17.3em;
+  text-align: center;
+  margin-top: 0.5em;
+  border-radius: 1em;
+  cursor: pointer;
+  float: center;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+input[type="button"]:hover {
+  background-color: #ffffff;
+  color: #990033;
+  border: 3px solid #990033;
+  transition: 0.4s;
+}
+
+.sidedP {
+  display: inline-block;
+  vertical-align: top;
+}
+
+div.sidedP {
+  width: 7em;
+  margin-top: 0.3em;
+  text-align: left;
+}
+
+select {
+  background-color: #f1f1f1;
 }

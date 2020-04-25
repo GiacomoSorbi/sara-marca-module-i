@@ -44,50 +44,104 @@
         </nav>
       </header>
       <main>
-        <div id="leftContainer"></div>
+        <!-- Main part with three columns-->
+        <div id="wineContainers">
+        <div id="leftContainer">
+          <span class="webLoc">
+          <p><a href="./index.html">Home ></a><a href="./asknonno.html">Ask Nonno</a></p>
+          </span>
+          <div class="telEmailCS">
+            <hr class="solidLine" />
+            <h4>CUSTOMER SERVICE TEAM</h4>
+            <p>TEL: +44 0123 4567 8910</p>
+            <p>Monday to Saturday:</p>
+            <p>8:00 - 17:00</p>
+            <hr class="solidLine" />
+          </div>
+        </div>
         <div id="centralContainer">
           <div class="pageTitle">
           <h1 class="sTitle">CONTACT US</h1>
         </div>
-        <form action="csform.html" method="SEND" class="contactForm">
-          <p><label for="email">Email Address</label><input type="email" name="email" id="email" /></p>
-          <div class="titleP">
-          <p><label for="titleP">Title</label><input list="titlePerson" name="titleP" id="titleP" />
-          <datalist id="titlePerson">
-            <option value="Mr"></option>
-            <option value="Mrs"></option>
-            <option value="Miss"></option>
-            <option value="Ms"></option>
-            <option value="Mr & Mrs"></option>
-          </datalist></p>
+        <form action="/csform.html" method="SEND" class="contactForm">
+          <div class="inputRow">
+          <div class="sidedP"><label for="email">Email Address</label>
+          </div>
+          <div class="sidedP"><input type="email" name="email" id="email" />
+           </div>
+          </div>
+          <div class="inputRow">
+          <div class="sidedP"><label for="titleP">Title</label>
+          </div>
+          <div class="sidedP"><select>
+            <option value="blank"></option>
+            <option value="mr">Mr</option>
+            <option value="mrs">Mrs</option>
+            <option value="miss">Miss</option>
+            <option value="ms">Ms</option>
+            <option value="mrMrs">Mr & Mrs</option>
+          </select>
+         </div>
         </div>
-          <p><label for="firstN">First Name</label><input type="text" name="firstN" id="firstN" /></p>
-          <p><label for="lastN">Last Name</label><input type="text" name="lastN" id="lastN" /></p>
-          <p><label for="custNum">Customer N.</label><input type="number" name="custN" id="custNum" /></p>
-          <p><label for="postcode">Postcode</label><input type="text" name="postcode" id="postcode" /></p>
-          <div class="messageP">
-          <p><label for="subject">Subject</label><input list="subjetList" name="subject" id="subject" />
-          <datalist id="subjetList">
-            <option value="Order related"></option>
-            <option value="Payment issues"></option>
-            <option value="Return an Item"></option>
-            <option value="Other"></option>
-          </datalist></p>
-          <p><label for="message"></label><textarea id="message" name="message"rows="10" columns="80">Your message here</textarea></p>
+        <div class="inputRow">
+          <div class="sidedP"><label for="firstN">First Name</label>
         </div>
-        <div class="submission">
-          <input type="button" value="SUBMIT">
+          <div class="sidedP"><input type="text" name="firstN" id="firstN" />
+          </div>
         </div>
+        <div class="inputRow">
+          <div class="sidedP"><label for="lastN">Last Name</label>
+        </div>
+          <div class="sidedP"><input type="text" name="lastN" id="lastN" />
+          </div>
+        </div>
+          <div class="inputRow">
+          <div class="sidedP"><label for="custNum">Customer N.</label>
+          </div>
+          <div class="sidedP"><input type="text" name="custN" id="custNum" />
+          </div>
+        </div>
+        <div class="inputRow">
+          <div class="sidedP"><label for="postcode">Postcode</label>
+          </div>
+          <div class="sidedP"><input type="text" name="postcode" id="postcode" />
+          </div>
+          </div>
+          <div class="inputRow">
+          <div class="sidedP"><label for="subject">Subject</label>
+          </div>
+          <div class="sidedP"><select id="subjetList">
+            <option value="blank"></option>
+            <option value="order">Order related</option>
+            <option value="pay">Payment issues</option>
+            <option value="return">Return an item</option>
+            <option value="Other">Other</option>
+          </select>
+         </div>
+        </div>
+        <div class="inputRow">
+          <div class="sidedP"><label for="message">Message</label>
+          </div>
+          <div class="sidedP"><textarea id="message">Your message here</textarea>
+          </div>
+        </div>
+        <div class="inputRow">
+          <div class="sidedP">
+          </div>
+          <div class="sidedP"><input type="button" value="SUBMIT">
+        </div>
+      </div>
         </form>
       </div>
       <div id="rightContainer"></div>
+    </div>
     </main>
 
     <!--Footer goes below-->
     <footer id="footerBttm">
       <div class="col-left">
       <ul>
-        <li><a href="#">ABOUT US</a></li>
+        <li><a href="corporate.html">ABOUT US</a></li>
         <li><a href="#">USEFUL INFO</a></li>
         <li><a href="#">CAREERS</a></li>
       </ul>
