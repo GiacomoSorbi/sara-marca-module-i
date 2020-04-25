@@ -1,0 +1,40 @@
+#corporateContainer {
+  display: inline-flex;
+  height: 100px;
+  margin: 0 30px;
+  padding: 0;
+}
+
+#mainContainer {
+  float: left;
+  width: 60%;
+}
+
+#smallContainerRight {
+  float: left;
+  width: 40%;
+  background-color: blue;
+}
+
+img.teamPhoto {
+  width: 100%;
+}
+
+p.teamText {
+  display: flex;
+  direction: row;
+  width: 60%;
+}
+
+div.teamRow {
+  display: inline-flex;
+  float: left;
+}
+
+div.teamIndivid {
+  float: left;
+}
+
+img.teamI {
+  border-radius: 50%;
+}
