@@ -1,3 +1,23 @@
+/* Customer Service info into small Left container */
+.telEmailCS {
+  text-align: center;
+  padding: 10px;
+}
+
+.telEmailCS h4 {
+  margin-bottom: 10px;
+}
+
+.telEmailCS p {
+  font-size: small;
+  text-align: left;
+}
+
+.solidLine {
+  margin: 10px 0px;
+}
+
+/* Form container */
 form.contactForm {
   display: inline-flexbox;
   margin-left: -14em;
@@ -14,6 +34,7 @@ textarea {
   width: 30em;
 }
 
+/* General styling look for all imputs across the form */
 .inputRow input[type="text"],
 .inputRow input[type="email"],
 .inputRow select,
@@ -25,10 +46,12 @@ textarea {
   padding: 0.3em;
 }
 
+/* Message area */
 .inputRow textarea {
   height: 12em;
 }
 
+/* Submit button at the bottom of the form */
 .inputRow input[type="button"] {
   border: 3px solid #55021e;
   background-color: #990033;
@@ -62,7 +85,7 @@ div.sidedP {
   margin-top: 0.3em;
   text-align: left;
 }
-
+/* Drop-down menu colour */
 select {
   background-color: #f1f1f1;
 }

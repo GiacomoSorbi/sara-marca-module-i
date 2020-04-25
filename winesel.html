@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Nonnovino Homepage" />
         <meta name="title" content="Nonnovino Italian wine shop" />
+        <!-- CSS style sheets here -->
         <link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
+        <link href="css/wineshopstyle.css" type="text/css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/eb3c66bc02.js" crossorigin="anonymous"></script>
   <body>
     <header>
@@ -43,20 +45,53 @@
       </header>
       <main>
         <div id="wineContainers">
+          <!-- small part with path and filtering criteria -->
         <div id="leftContainer">
           <span class="webLoc">
-          <p><a href="./index.html">Home ></a><a href="winesel.html">Buy Wines</a></p>
+          <p><a href="./index.html">HOME ></a><a href="winesel.html">BUY WINE</a></p>
         </span>
-          <div class="telEmailCS">
+          <div class="SideFilters">
+            <p class="textF"><span>FILTERS</span><span>CLEAR X</span></p>
             <hr class="solidLine" />
-            <h4>CUSTOMER SERVICE TEAM</h4>
-            <p>TEL: +44 0123 4567 8910</p>
-            <p>Monday to Saturday:</p>
-            <p>8:00 - 17:00</p>
-            <hr class="solidLine" />
+            <div class="filterRow">
+              <div class="sidedF">
+            <label>TYPE</label>
+          </div>
+            <div class="sidedFI">
+            <input class="type" type="text" />
           </div>
         </div>
+        <div class="filterRow">
+        <div class="sidedF">
+          <label>GRAPE</label>
+        </div>
+          <div class="sidedFI">
+          <input class="type" type="text" />
+        </div>
+      </div>
+      <div class="filterRow">
+        <div class="sidesF">
+          <label>PRICE</label>
+        </div>
+        <div class="sidedFI">
+          <input type="range" min="0" max="100" />
+          <p class="sidedFI"><span>£0</span><span>£100</span></p>
+        </div>
+      </div>
+      <div class="filterRow">
+      <div class="sidedF">
+        <label>REGION</label>
+      </div>
+      <div class="sidedFI">
+        <input class="type" type="text" />
+      </div>
+        </div>
+        <h4 class="filterRow"><a href="#">BESTSELLERS</a></h4>
+      </div>
+      </div>
+        <!-- Central container with wines -->
         <div id="centralContainer">
+            <!-- Top Wine Row -->
         <section class="wineRow">
           <!-- Chianti Fiasco Buondonno -->
           <div class="wineBottle">
@@ -264,7 +299,9 @@
           </div>
         </section>
         </div>
-      </div>
+    
+      <div id="rightContainer"></div>
+    </div>
     </main>
 
     <!--Footer goes below-->

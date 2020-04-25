@@ -24,63 +24,6 @@ main {
   justify-items: center;
 }
 
-#wineContainers {
-  position: relative;
-  display: inline-flex;
-  background-color: #fafad2;
-  width: 100%;
-}
-
-#leftContainer {
-  float: left;
-  width: 15%;
-}
-
-span.webLoc {
-  margin-top: 10px;
-  margin-left: 10px;
-  text-align: left;
-  text-decoration: underline;
-}
-
-span.webLoc p a {
-  color: blue;
-}
-
-.telEmailCS {
-  text-align: center;
-  padding: 10px;
-}
-
-.telEmailCS h4 {
-  margin-bottom: 10px;
-}
-
-.telEmailCS p {
-  font-size: small;
-  text-align: left;
-}
-
-.solidLine {
-  margin: 10px 0px;
-}
-
-#rightContainer {
-  float: right;
-  width: 15%;
-  margin-top: 0;
-}
-
-#centralContainer {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 70%;
-  padding: 30px;
-  box-shadow: 5px 5px 5px #f5f5f5;
-}
-
 /* Top black bar Styling */
 #topBar {
   background-color: #000000;
@@ -251,17 +194,57 @@ figure {
   border: 3px solid #990033;
   transition: 0.4s;
 }
-
-/* Bestsellers section below */
-#bestSellContainer {
+/* Where the main action develops (devided in 3 containers */
+#wineContainers {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  background-color: #fafad2;
   width: 100%;
-  align-items: center;
-  margin-bottom: 50px;
 }
 
+/* Left Container 15% with internal styling */
+#leftContainer {
+  float: left;
+  width: 15%;
+}
+/* Webpage path styling */
+span.webLoc {
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: left;
+  text-decoration: underline;
+}
+
+span.webLoc p a {
+  color: blue;
+}
+
+/* Big central container 70% */
+#centralContainer {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70%;
+  padding: 30px;
+  box-shadow: 5px 5px 5px #f5f5f5;
+}
+
+/* Small container Right 15% */
+#rightContainer {
+  float: right;
+  width: 15%;
+  margin-top: 0;
+}
+
+#innerCentralContainer {
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Bestsellers section below */
 h1 {
   display: flex;
   justify-content: center;
