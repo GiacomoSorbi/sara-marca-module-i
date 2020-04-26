@@ -1,40 +1,102 @@
-#corporateContainer {
-  display: inline-flex;
-  height: 100px;
+#pageWrapper {
   margin: 0 30px;
   padding: 0;
+  background-color: #ffffff;
 }
 
-#mainContainer {
-  float: left;
-  width: 60%;
-}
-
-#smallContainerRight {
-  float: left;
-  width: 40%;
-  background-color: blue;
-}
-
-img.teamPhoto {
+.mRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
 }
 
-p.teamText {
+div.doubleColumn {
   display: flex;
-  direction: row;
-  width: 60%;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
 }
 
-div.teamRow {
-  display: inline-flex;
-  float: left;
+div.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 
-div.teamIndivid {
-  float: left;
+.columnOne {
+  padding-bottom: 15px;
 }
 
-img.teamI {
-  border-radius: 50%;
+/* 2 column text styling */
+#textContainer {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+.textRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.textBlock {
+  padding: 10px;
+  column-gap: 2em;
+}
+
+/* teamContainer styling */
+#teamContainer {
+  margin: 0;
+  padding: 0;
+}
+
+div.teamMRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: stretch;
+  padding-bottom: 10px;
+}
+
+.smallTxt {
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.smallTxt span {
+  font-style: italic;
+}
+
+.smallTxt h4,
+.smallTxt span,
+.smallTxt p {
+  text-align: right;
+}
+
+.smallTxt p {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+p.smallTxtB {
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: 700;
+  text-align: right;
+}
+
+.teamMpic img {
+  width: 120px;
 }
