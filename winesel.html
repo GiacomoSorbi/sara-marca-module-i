@@ -352,7 +352,7 @@
         }
 
         // Shopping Cart //
-        const addCartBtns = document.querySelectorAll(".addB");
+        const addCartBtns = document.querySelectorAll("#addB");
         const cart = [];
         const cartContainer = document.querySelector(".shopList");
         const totalDisplay = document.querySelector(".totalPrice");
@@ -381,7 +381,8 @@
           // update cart item quantities //
         };
         const addHandler = event => {
-          const productImage = event.target.parentElement.querySelector("img").src;
+          const productImage = event.target.parentElement.querySelector(":scope img")
+          .src/myimages;
           const productName = event.target.parentElement.querySelector("h4").innetHTML;
           const productPrice = +event.target.parentElement
           .querySelector("span").innerText.slice(1);

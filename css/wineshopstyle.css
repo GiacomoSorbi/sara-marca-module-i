@@ -79,6 +79,11 @@ h2 {
   display: inline-flex;
 }
 
+h5 {
+  padding-top: 4px;
+  font-size: 1em;
+}
+
 .shopMenu {
   display: flex;
   flex-flow: inline-flex;
