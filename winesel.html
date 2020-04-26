@@ -346,12 +346,40 @@
     <!-- javascript bits + shopping cart below-->
     <script>
 
-       /* message on li a href without pages */
+       // message on li a href without pages //
        function page_unavailable(node){
           return alert("Sorry, this page is currently under construction. Thanks for your patience.")
         }
 
-        /* Shopping Cart */
+        // Shopping Cart //
+        const addCartBts = document.querySelectorAll(".addB");
+        const cart = [];
+        const cartContainer = document.querySelector(".shopList");
+        const totalDisplay = document.querySelector(".totalPrice");
+        let totalPrice = 0;
+        const updateCart = () => {
+          cart.Container.innerHTML ="";
+          cart.forEach(function(item) {
+            totalPrice += item.productPrice * item.quantity;
+            const el = document.createElement("div");
+            el.classList = "shopListRow";
+            el.innerHTML = `
+            <div class="shopImgName">
+            <img class="shopWineImg" src="${item.productImage}" alt="placeholder" height="30" style="/* height: 30px; */ "/>"
+            <span class="shopWineName">${item.productName}</span>
+            </div>
+            <span class="shopPrice">${item.productPrice}</span>
+            <div class="shopQuantityReset">
+            <imput type="number" min="1" id="shopQuantity" value="${item.quantity}" />
+            <button type="reset" id=resetBtn">X</button>
+            </div>
+            </div>`;
+            // The command below creates a new element (el) in cart container //
+
+            cartContainer.appendChild(el);
+          });
+        };
+
 
     </script>
 </body>
