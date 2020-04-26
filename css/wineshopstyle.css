@@ -50,3 +50,166 @@ div.sidedFI {
 .solidLine {
   margin: 0 10px 10px 10px;
 }
+
+/* Shopping cart styling */
+#shoppingCart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.dottedLine {
+  border: 0 none;
+  border-top: 1px dashed #930033;
+  background: none;
+  width: 100%;
+  height: 0;
+}
+
+h2 {
+  color: #990033;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: auto;
+  text-align: center;
+  display: inline-flex;
+}
+
+.shopMenu {
+  display: flex;
+  flex-flow: inline-flex;
+  justify-content: space-evenly;
+}
+
+.shopList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* Visible only when there is at least one item into the cart */
+.shopListRow {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  top: 50%;
+  justify-content: space-evenly;
+  border-bottom: 1px dashed #990033;
+}
+
+.shopWineImg {
+  display: flex;
+  width: 50%;
+  top: 50%;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  text-align: left;
+  align-items: center;
+}
+
+.shopPrice {
+  display: inline-flex;
+  width: 20%;
+  font-size: 1.5em;
+  align-items: center;
+  justify-items: center;
+  transform: translateX(-65px);
+}
+
+.shopQuantity {
+  max-width: 50px;
+  height: 15px;
+  border-radius: 4px;
+}
+
+.shopQuantityReset {
+  position: relative;
+  display: inline-flex;
+  top: 50%;
+  align-items: center;
+  transform: translateX(-40px);
+}
+
+.shopWineName {
+  margin-left: 0.5em;
+  font-size: 1.5em;
+}
+
+#resetBtn {
+  display: block;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #a9a9a9;
+  background-color: #a9a9a9;
+  color: #ffffff;
+  font-size: 0.8em;
+  font-family: arial;
+  font-weight: bold;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  transform: translateX(5px);
+  transition: 0.4s;
+}
+
+#resetBtn:hover {
+  background-color: #ffffff;
+  font-family: arial;
+  font-weight: bold;
+  border: 1px solid #2c2c2c;
+  color: #2c2c2c;
+  align-items: center;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.shopTotal {
+  display: flex;
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-family: arial;
+  font-weight: 700;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.total {
+  margin-right: 5px;
+}
+
+.checkoutBtn {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.checkout {
+  font-family: arial;
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 0.4em;
+  background-color: #000000;
+  border: 3px solid #000000;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 2em;
+  box-shadow: 1px 1px #2c2c2c;
+  color: #ffffff;
+  height: 2em;
+  width: 10em;
+  margin: 9px 4px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.checkout:hover {
+  background-color: #930033;
+  color: #ffff00;
+  border: 3px solid #000000;
+  transition: 0.4s;
+}

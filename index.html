@@ -58,9 +58,9 @@
         <!--Main navigation bar-->
         <nav>
           <ul>
-            <li class="offers"><a href="./offers.html">Offers</a></li>
+            <li class="offers"><a href="#" onclick="return page_unavailable(this);">Offers</a></li>
             <li class="wineSel"><a href="./winesel.html">Buy Wine</a></li>
-            <li class="nonnoSpec"><a href="./nonnospec.html">Our Specials</a></li>
+            <li class="nonnoSpec"><a href="#" onclick="return page_unavailable(this);">Our Specials</a></li>
             <li class="askNonno"><a href="./asknonno.html">Ask Nonno</a></li>
           </ul>
         </nav>
@@ -176,8 +176,8 @@
         <div class="col-left">
         <ul>
           <li><a href="corporate.html">ABOUT US</a></li>
-          <li><a href="#">USEFUL INFO</a></li>
-          <li><a href="#">CAREERS</a></li>
+          <li><a href="#" onclick="return page_unavailable(this);">USEFUL INFO</a></li>
+          <li><a href="#" onclick="return page_unavailable(this);">CAREERS</a></li>
         </ul>
         </div>
       <div class="col-right">
@@ -194,7 +194,17 @@
 
       <!--Javascript bit for the slider-->
       <script>
-        let i = 0;
+
+        /* message on li a href without pages */
+        function page_unavailable(node){
+          return alert("Sorry, this page is currently under construction. Thanks for your patience.")
+        }
+
+
+
+
+
+        /*let i = 0;
         const slides= [];
         const time = 3000;
 
@@ -216,7 +226,7 @@
         }
 
         //Run function when page loads//
-        window.onload = slideShow;
+        window.onload = slideShow;*/
 
         </script>
   </body>
