@@ -99,13 +99,13 @@
             <p>
               <img
                 class="wineImg"
-                src="images/chianti.jpg"
+                src="myimages/chianti.jpg"
                 alt="Chianti Classico Fiasco by Buondonno 100cl"
               /><a href="winesel.html"></a>
             </p>
             <div class="wineNameProd">
             <h4 class="wineName">Chianti Classico D.O.C. Fiasco 100cl</h4>
-            <h4 class="producer">Buondonno</h4>
+            <h5 class="producer">Buondonno</h5>
           </div>
           <div class="priceButton">
             <span class="price">£27.00</span>
@@ -121,13 +121,13 @@
             <p>
               <img
                 class="wineImg"
-                src="images/sassoalloro.jpg"
+                src="myimages/sassoalloro.jpg"
                 alt="Sassoalloro Biondi Santi 75cl"
               /><a href="winesel.html"></a>
             </p>
             <div class="wineNameProd">
             <h4 class="wineName">Sassoalloro</h4>
-            <h4 class="producer">Biondi Santi</h4>
+            <h5 class="producer">Biondi Santi</h5>
           </div>
           <div class="priceButton">
             <span class="price">£40.00</span>
@@ -143,13 +143,13 @@
             <p>
               <img
                 class="wineImg"
-                src="images/vermentino.jpg"
+                src="myimages/vermentino.jpg"
                 alt="Vermentino di Sardegna by Smeralda 75cl"
               /><a href="winesel.html"></a>
             </p>
             <div class="wineNameProd">
             <h4 class="wineName">Vermentino di Sardegna D.O.C.</h4>
-            <h4 class="producer">Smeralda</h4>
+            <h5 class="producer">Smeralda</h5>
           </div>
           <div class="priceButton">
             <span class="price">£22.00</span>
@@ -168,13 +168,13 @@
             <p>
               <img
                 class="wineImg"
-                src="images/vaedumCaesaris.jpg"
+                src="myimages/vaedumCaesaris.jpg"
                 alt="Vadum Caesaris by Vallarom 75cl"
               /><a href="winesel.html"></a>
             </p>
             <div class="wineNameProd">
             <h4 class="wineName">Vadum Caesaris</h4>
-            <h4 class="producer">Vallarom</h4>
+            <h5 class="producer">Vallarom</h5>
           </div>
           <div class="priceButton">
             <span class="price">£35.00</span>
@@ -190,13 +190,13 @@
             <p>
               <img
                 class="wineImg"
-                src="images/glamour.jpg"
+                src="myimages/glamour.jpg"
                 alt="Glamour Rosé Spumante by Antonini Ceresa 75cl"
               /><a href="winesel.html"></a>
             </p>
             <div class="wineNameProd">
             <h4 class="wineName">Glamour Rosé Spumante</h4>
-            <h4 class="producer">Antonini Ceresa</h4>
+            <h5 class="producer">Antonini Ceresa</h5>
           </div>
           <div class="priceButton">
             <span class="price">£35.00</span>
@@ -212,13 +212,13 @@
             <p>
               <img
                 class="wineImg"
-                src="images/brunelloIlPoggione.jpg"
+                src="myimages/brunelloIlPoggione.jpg"
                 alt="Brunello di Montalcino D.O.C.G. by Il Poggione75cl"
               /><a href="winesel.html"></a>
             </p>
             <div class="wineNameProd">
             <h4 class="wineName">Brunello di Montalcino D.O.C.G.</h4>
-            <h4 class="producer">Il Poggione</h4>
+            <h5 class="producer">Il Poggione</h5>
           </div>
           <div class="priceButton">
             <span class="price">£35.00</span>
@@ -237,13 +237,13 @@
             <p>
               <img
                 class="wineImg"
-                src="images/friulano.jpg"
+                src="myimages/friulano.jpg"
                 alt="Friulano by Vigna Traverso 75cl"
               /><a href="winesel.html"></a>
             </p>
             <div class="wineNameProd">
             <h4 class="wineName">Friulano Friuli D.O.C.</h4>
-            <h4 class="producer">Vigna Traverso</h4>
+            <h5 class="producer">Vigna Traverso</h5>
           </div>
           <div class="priceButton">
             <span class="price">£20.00</span>
@@ -259,13 +259,13 @@
           <p>
             <img
               class="wineImg"
-              src="images/prosecco.jpg"
+              src="myimages/prosecco.jpg"
               alt="Prosecco extra dry by Sanmartino 75cl"
             /><a href="winesel.html"></a>
           </p>
           <div class="wineNameProd">
           <h4 class="wineName">Prosecco D.O.C. Extra Dry</h4>
-          <h4 class="producer">Sanmartino</h4>
+          <h5 class="producer">Sanmartino</h5>
         </div>
         <div class="priceButton">
           <span class="price">£20.00</span>
@@ -281,13 +281,13 @@
             <p>
               <img
                 class="wineImg"
-                src="images/moscato.jpg"
+                src="myimages/moscato.jpg"
                 alt="Avie Moscato Passito by Cascina Castlet 75cl"
               /><a href="winesel.html"></a>
             </p>
             <div class="wineNameProd">
             <h4 class="wineName">Avie Moscato Passito D.O.C.</h4>
-            <h4 class="producer">Cascina Castlet</h4>
+            <h5 class="producer">Cascina Castlet</h5>
           </div>
           <div class="priceButton">
             <span class="price">£20.00</span>
@@ -378,8 +378,30 @@
 
             cartContainer.appendChild(el);
           });
+          // update cart item quantities //
         };
+        const addHandler = event => {
+          const productImage = event.target.parentElement.querySelector("img").src;
+          const productName = event.target.parentElement.querySelector("h4").innetHTML;
+          const productPrice = +event.target.parentElement
+          .querySelector("span").innerText.slice(1);
 
+          let found = false;
+          for (let i = 0; 1< cart.length; i++) {
+            const item = cart[i];
+            if (item.productName === productName) {
+              found = true;
+              item.quantity = item.quantity + 1;
+            }
+          }
+          if (found === false) {
+            cart.push({productImage, productName, productPrice, quantity:1});
+          }
+          updateCart();
+        };
+        for (let i = 0; i < addCartBtns.length; i++) {
+          addCartBtns[i].onclick = addHandler;
+        };
 
     </script>
 </body>
