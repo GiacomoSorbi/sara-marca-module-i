@@ -6,7 +6,6 @@
         <meta name="description" content="Nonnovino Italian Wine Shop" />
         <meta name="title" content="Nonnovino: Buy Wines" />
         <!-- CSS style sheets here -->
-        <link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
         <link href="css/wineshopstyle.css" type="text/css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/eb3c66bc02.js" crossorigin="anonymous"></script>
         </head>
@@ -381,8 +380,8 @@
           // update cart item quantities //
         };
         const addHandler = event => {
-          const productImage = event.target.parentElement.querySelector(":scope img")
-          .src/myimages;
+          const productImage = event.target.parentElement.querySelector("img")
+          .src;
           const productName = event.target.parentElement.querySelector("h4").innetHTML;
           const productPrice = +event.target.parentElement
           .querySelector("span").innerText.slice(1);

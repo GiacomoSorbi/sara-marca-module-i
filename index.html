@@ -77,13 +77,14 @@
           <img class="sliderImg" src="myimages/offer1Slider.jpg" alt="Monthly offers" />
         </div>
         </figure>
-          <div class="btnCont">
+        <!-- attempted to animate the slider with css first and later with js but failed at both :-(( -->
+          <!--<div class="btnCont">
             <a href="#sliderImg1" class="sliderBtn"></a>
             <a href="#sliderImg2" class="sliderBtn"></a>
             <a href="#sliderImg3" class="sliderBtn"></a>
           </div>
         </div>
-      </div>
+      </div>-->
       <!--Wine typeButtons-->
       <div id="buttonContainer">
         <button class="wineTypeB">SPARKLING WINES</button>
@@ -167,7 +168,7 @@
           </div>
         </section>
       </div>
-    </div>
+    <div id="rightContainer"></div>
   </div>
     </main>
 
@@ -192,7 +193,6 @@
     </div>
       </footer>
 
-      <!--Javascript bit for the slider-->
       <script>
 
         // message on li a href without pages //
@@ -200,11 +200,8 @@
           return alert("Sorry, this page is currently under construction. Thanks for your patience.")
         }
 
-
-
-
-
-        /*let i = 0;
+        /* Javascript bit for the slider
+        let i = 0;
         const slides= [];
         const time = 3000;
 
