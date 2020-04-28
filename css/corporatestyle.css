@@ -7,72 +7,78 @@
 .mRow {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
-div.doubleColumn {
+.doubleColumn {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 2;
 }
 
-div.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
 .columnOne {
   padding-bottom: 15px;
 }
 
-/* 2 column text styling */
-#textContainer {
-  margin: 0;
-  padding: 0;
-  text-align: justify;
-}
+/* 2 column text styling*/
 
 .textRow {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .textColumn {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
   flex: 1;
 }
 
 .textBlock {
   padding: 10px;
-  column-gap: 2em;
+  text-align: justify;
 }
 
-/* teamContainer styling */
-#teamContainer {
+/* teamContainer styling*/
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.teamContainer {
   margin: 0;
   padding: 0;
 }
-
-div.teamMRow {
+.teamMRow {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: stretch;
+  justify-items: right;
   padding-bottom: 10px;
+  width: 369px;
+}
+
+.teamMTextCol {
+  display: inline-block;
+  justify-content: right;
+  align-items: stretch;
+  text-align: right;
+  padding-top: 10px;
+}
+
+.teamMTextCol2 {
+  display: block;
+  float: right;
+  margin-left: 0;
+}
+
+.teamMpic img {
+  width: 120px;
+  justify-content: right;
 }
 
 .smallTxt {
   padding-top: 10px;
   padding-right: 10px;
-  text-align: right;
 }
 
 .smallTxt span {
@@ -97,13 +103,123 @@ p.smallTxtB {
   text-align: right;
 }
 
-.teamMpic img {
-  width: 120px;
+img.teamPhoto {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 /* Media Queries below */
 @media screen and (max-width: 600px) {
   img {
     max-width: 100%;
+  }
+
+  #textContainer {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+  }
+
+  .textRow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .textColumn {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .textBlock {
+    padding: 10px;
+  }
+
+  .mRow {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  div.doubleColumn {
+    display: flex;
+    flex: 1;
+  }
+
+  div.column {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex: 1;
+  }
+
+  .columnOne {
+    padding-bottom: 15px;
+  }
+
+  .columnTwo {
+    display: flex;
+  }
+
+  .teamContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .teamMRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .teamContainer {
+    margin: 0;
+    padding: 0;
+  }
+  .teamMRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .teamMTextCol {
+    display: inline-flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .teamMTextCol2 {
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  smallTxt {
+    padding-bottom: 10px;
+  }
+
+  .smallTxt span {
+    font-style: italic;
+  }
+
+  .smallTxt h4,
+  .smallTxt span,
+  .smallTxt p {
+    text-align: center;
+  }
+
+  .smallTxt p {
+    font-size: 0.8em;
+    font-style: italic;
+  }
+
+  p.smallTxtB {
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
   }
 }
