@@ -417,7 +417,7 @@ footer {
 
 /* MEDIA QUERIES BELOW */
 
-/* Media queris for Tablet */
+/* Media queries for Tablet */
 @media screen and (max-width: 600px) {
   .pageContent-flex,
   .container-flex {
