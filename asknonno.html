@@ -1,172 +1,247 @@
 <!DOCTYPE html>
-<hthml>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=600px, initial-scale=1" />
-        <meta name="description" content="Contact our Customer Service Team" />
-        <title>"Nonnovino: Contact us Form"</title>
-        <!-- CSS stylesheet linked here-->
-        <link href="css/formstyle.css" type="text/css" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/eb3c66bc02.js" crossorigin="anonymous"></script>
-        </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nonnovino contact form" />
+    <title>Contact us</title>
+    <!-- CSS stylesheet linked below-->
+    <!--link href="css/stylesheet.css" type="text/css" rel="stylesheet" /> -->
+    <link href="newformstyle.css" type="text/css" rel="stylesheet" />
+
+    <!--Links for favicon!-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="myimages/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="myimages/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="myimages/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="myimages/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="myimages/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="myimages/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="myimages/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="myimages/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="myimages/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="myimages/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="myimages/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="myimages/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="myimages/favicon-16x16.png"
+    />
+    <link rel="manifest" href="myimages/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="myimages/msapplication-TileImage"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!--Script to call fontawesome icons displayed in the footer-->
+    <script
+      src="https://kit.fontawesome.com/eb3c66bc02.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
   <body>
-    <header>
-      <!--Black bar with search field + logo + login-->
-        <div id="topBar">
-          <div class="searchBar">
-          <form class="searchBar">
-            <input type="search" id="siteSearch" name="Quest" placeholder=" Search wines" required>
-            <button class="srcBtn">Search</button>
+    <!-- page content wrapped into this container to improve accessibility -->
+    <div class="pageContent pageContext-flex">
+      <!-- the header consists of a black top bar + navigation bar + red ribbon with catch phrase -->
+      <header class="topBar">
+        <div class="blackBar">
+          <div class="nonnoVinoLogo">
+            <a href="./newindex.html"
+              ><img
+                class="logoTop"
+                src="myimages/Nonnovino200pxW.png"
+                alt="company logo"
+              />
+            </a>
+          </div>
+          <div class="wineSearchbar">
+            <form class="wineSearchBar">
+              <span class="screenReaderOnly">Wine searchbar</span>
+              <input
+                type="search"
+                name="winesearchbar"
+                placeholder="Search wines"
+                alt="Wine searchbar"
+                required
+              />
+              <button class="magnifier" alt="Search button">
+                <a><i class="fas fa-search"></i></a>
+              </button>
             </form>
           </div>
-        <div class="logo">
-          <p>
-            <a href="./index.html"><img class="logoTop" src="Nonnovino200pxW.png" alt="company logo" />
-            </a>
-          </p>
+          <div class="checkout">
+            <span>
+              <a href="#"><i class="fas fa-shopping-cart"></i></a>
+              <span class="total">£0.00</span>
+              <input type="submit" value="Checkout" />
+            </span>
+          </div>
         </div>
-        <div class="logIn">
-          <span>
-            <p class="logIn">Sign up</p>
-            <p class="logIn">Log in</p>
-            <p class="logIn">Help</p>
-          </span>
-        </div>
-      </div>
-        <!--Main navigation bar-->
         <nav>
           <ul>
-            <li class="offers"><a href="#" onclick="return page_unavailable(this);">Offers</a></li>
+            <li class="offers">
+              <a href="#" onclick="return page_unavailable(this);">Offers</a>
+            </li>
             <li class="wineSel"><a href="./winesel.html">Buy Wine</a></li>
-            <li class="nonnoSpec"><a href="#" onclick="return page_unavailable(this);">Our Specials</a></li>
+            <li class="nonnoSpec">
+              <a href="#" onclick="return page_unavailable(this)"
+                >Our Specials</a
+              >
+            </li>
             <li class="askNonno"><a href="./asknonno.html">Ask Nonno</a></li>
           </ul>
         </nav>
       </header>
-      <main>
-        <!-- Main part with three columns-->
-        <div id="wineContainers">
-          <!-- small Container with path and info on the left -->
-        <div id="leftContainer">
-          <span class="webLoc">
-          <p><a href="./index.html">HOME ></a><a href="./asknonno.html">ASK NONNO</a></p>
-          </span>
-          <div class="telEmailCS">
-            <hr class="solidLine" />
-            <h4>CUSTOMER SERVICE TEAM</h4>
-            <p>TEL: +44 0123 4567 8910</p>
-            <p>Monday to Saturday:</p>
-            <p>8:00 - 17:00</p>
-            <hr class="solidLine" />
+      <div class="container container-flex">
+        <main class="wineContainer" role="main">
+          <div class="wineContainer">
+            <aside class="sidebarLx">
+              <div class="csContactside">
+                <div class="pageLink">
+                  <span class="aPageLink">
+                    <a href="./index.html">HOME ></a
+                    ><a href="./asknonno.html">ASK NONNO</a>
+                  </span>
+                </div>
+                <div class="csContact">
+                  <hr class="solidLine" />
+                  <h4 class="contactTel">CUSTOMER SERVICE TEAM</h4>
+                  <p>TEL: +44 0123 4567 8910</p>
+                  <p>Monday to Saturday:8:00 - 17:00</p>
+                  <hr class="solidLine" />
+                </div>
+              </div>
+            </aside>
+            <!-- Section with contact form -->
+            <section class="mainSection">
+              <h1 class="sTitle">CONTACT US</h1>
+              <form id="contactForm" action="/asknonno.html" method="SEND">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" />
+                <label for="titleP">Title</label>
+                <select>
+                  <option value="blank"></option>
+                  <option value="mr">Mr</option>
+                  <option value="mrs">Mrs</option>
+                  <option value="miss">Miss</option>
+                  <option value="ms">Ms</option>
+                  <option value="mrMrs">Mr & Mrs</option>
+                </select>
+                <label for="firstN">First Name</label>
+                <input type="text" name="firstN" id="firstN" />
+                <label for="lastN">Last Name</label>
+                <input type="text" name="lastN" id="lastN" />
+                <label for="custNum">Customer N.</label>
+                <input type="text" name="custN" id="custNum" />
+                <label for="postcode">Postcode</label>
+                <input type="text" name="postcode" id="postcode" />
+                <label for="subject">Subject</label>
+                <select id="subjetList">
+                  <option value="blank"></option>
+                  <option value="order">Order related</option>
+                  <option value="pay">Payment issues</option>
+                  <option value="return">Return an item</option>
+                  <option value="Other">Other</option>
+                </select>
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  placeholder="Your message here"
+                ></textarea>
+                <button type="submit" class="formSubmitBtn">SUBMIT</button>
+              </form>
+            </section>
+            <aside class="sidebarRx"></aside>
           </div>
-        </div>
-        <!-- Contact Form -->
-        <div id="centralContainer">
-          <div class="pageTitle">
-          <h1 class="sTitle">CONTACT US</h1>
-        </div>
-        <form action="/csform.html" method="SEND" class="contactForm">
-          <div class="inputRow">
-          <div class="sidedP"><label for="email">Email Address</label>
-          </div>
-          <div class="sidedP"><input type="email" name="email" id="email" />
-           </div>
-          </div>
-          <div class="inputRow">
-          <div class="sidedP"><label for="titleP">Title</label>
-          </div>
-          <div class="sidedP"><select>
-            <option value="blank"></option>
-            <option value="mr">Mr</option>
-            <option value="mrs">Mrs</option>
-            <option value="miss">Miss</option>
-            <option value="ms">Ms</option>
-            <option value="mrMrs">Mr & Mrs</option>
-          </select>
-         </div>
-        </div>
-        <div class="inputRow">
-          <div class="sidedP"><label for="firstN">First Name</label>
-        </div>
-          <div class="sidedP"><input type="text" name="firstN" id="firstN" />
-          </div>
-        </div>
-        <div class="inputRow">
-          <div class="sidedP"><label for="lastN">Last Name</label>
-        </div>
-          <div class="sidedP"><input type="text" name="lastN" id="lastN" />
-          </div>
-        </div>
-          <div class="inputRow">
-          <div class="sidedP"><label for="custNum">Customer N.</label>
-          </div>
-          <div class="sidedP"><input type="text" name="custN" id="custNum" />
-          </div>
-        </div>
-        <div class="inputRow">
-          <div class="sidedP"><label for="postcode">Postcode</label>
-          </div>
-          <div class="sidedP"><input type="text" name="postcode" id="postcode" />
-          </div>
-          </div>
-          <div class="inputRow">
-          <div class="sidedP"><label for="subject">Subject</label>
-          </div>
-          <div class="sidedP"><select id="subjetList">
-            <option value="blank"></option>
-            <option value="order">Order related</option>
-            <option value="pay">Payment issues</option>
-            <option value="return">Return an item</option>
-            <option value="Other">Other</option>
-          </select>
-         </div>
-        </div>
-        <div class="inputRow">
-          <div class="sidedP"><label for="message">Message</label>
-          </div>
-          <div class="sidedP"><textarea id="message" placeholder="Your message here"></textarea>
-          </div>
-        </div>
-        <div class="inputRow">
-          <div class="sidedP">
-          </div>
-          <div class="sidedP"><input type="button" value="SUBMIT">
-        </div>
+        </main>
       </div>
-        </form>
-      </div>
-      <div id="rightContainer"></div>
+      <!-- Footer goes below  -->
+      <footer class="blackFooter">
+        <div class="footerColLx">
+          <ul>
+            <li><a href="corporate.html">ABOUT US</a></li>
+            <li>
+              <a href="#" onclick="return page_unavailable(this);"
+                >USEFUL INFO</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="return page_unavailable(this);">CAREERS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footerColRx">
+          <div class="footerColRxTop">
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+          </div>
+          <div class="footerColRxBottom">
+            <span
+              >For the facts
+              <a href="https://drinkaware.co.uk/" target="_blank"
+                >Drinkaware.co.uk</a
+              ></span
+            >
+          </div>
+        </div>
+      </footer>
+      <script src="style.js"></script>
     </div>
-    </main>
-
-    <!--Footer goes below-->
-    <footer id="footerBttm">
-      <div class="col-left">
-      <ul>
-        <li><a href="corporate.html">ABOUT US</a></li>
-        <li><a href="#" onclick="return page_unavailable(this);">USEFUL INFO</a></li>
-        <li><a href="#" onclick="return page_unavailable(this);">CAREERS</a></li>
-      </ul>
-      </div>
-    <div class="col-right">
-    <div class="social">
-      <a href="#"><i class="fab fa-instagram-square"></i></a>
-      <a href="#"><i class="fab fa-facebook-square"></i></a>
-      <a href="#"><i class="fab fa-twitter-square"></i></i></a>
-      </div>
-    <div class="col-rightBttm">
-      <span>For the facts<a href="https://drinkaware.co.uk/" target="_blank"> Drinkaware.co.uk</a></span>
-    </div>
-  </div>
-    </footer>
-    <!-- javascript below -->
-    <script>
-
-       // message on li a href without pages //
-       function page_unavailable(node){
-          return alert("Sorry, this page is currently under construction. Thanks for your patience.")
-        }
-
-    </script>
-</body>
-</hthml>
+  </body>
+</html>
