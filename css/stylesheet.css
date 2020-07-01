@@ -1,9 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
-  text-decoration: none;
-  outline-style: none;
   box-sizing: border-box;
 }
 
@@ -13,8 +10,25 @@ body {
   position: relative;
 }
 
-header {
+/* for screen readers only - text will be not visible*/
+/* the clip property is deprecated. It works on older browsers */
+.screenReaderOnly {
+  border: 0;
+  /* the clip-path property replaces clip on current browsers */
+  clip: rect(1px, 1px, 1px, 1px);
+  /* the clip-path property replaces clip on current browsers */
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  width: 1px;
+  overflow: hidden;
+  /* word-wrap allows for words to break only at break points*/
+  word-wrap: normal;
+}
+
+.topBar {
   display: block;
+  position: relative;
 }
 
 main {
@@ -22,92 +36,130 @@ main {
   justify-items: center;
 }
 
-/* Top black bar Styling */
-#topBar {
-  background-color: #000000;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
-  justify-content: space-evenly;
+.pageContent,
+.container {
   width: 100%;
-  height: 5em;
-}
-
-.searchBar {
-  display: flex;
-  align-items: center;
-}
-
-.searchBar input[type="search"] {
-  border: none;
-  width: 70%;
-  height: 2em;
-  border-top-left-radius: 1em;
-  border-bottom-left-radius: 1em;
-}
-
-.srcBtn {
-  color: #ffffff;
-  text-align: center;
-  line-height: 2px;
-  width: 4.7em;
-  height: 2em;
-  border: 1.5px;
-  border-color: #990033;
-  border-top-right-radius: 1em;
-  border-bottom-right-radius: 1em;
-  background: #990033;
-  box-shadow: 1px 1px #55021e;
-}
-
-.logIn p {
-  font-family: "Arial";
-  font-size: small;
-  font-weight: 20%;
-  align-items: space-evenly;
-  align-self: flex-end;
-  text-decoration-line: underline;
-  cursor: default;
-  margin: auto;
-  padding: 0.5em;
-}
-
-#logoTop,
-span {
-  display: flex;
-}
-
-/* Navigatioon Bar styling */
-nav {
-  position: relative;
-  background-color: #990033;
-  max-width: 100vw;
-  height: 3em;
-  text-align: center;
-  margin: 1px auto;
-  padding: 0;
-}
-
-nav ul {
-  display: flex;
   margin: 0;
   padding: 0;
 }
 
-nav li {
-  flex: 1;
-  font-family: Arial, sans-serif;
-  font-size: 1em;
+.pageContent-flex,
+.container-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top black bar Styling */
+.blackBar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000000;
+  align-items: center;
+  max-width: 100%;
+  height: 5em;
+}
+
+div.wineSearchbar {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  width: 25%;
+}
+
+form.wineSearchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wineSearchbar input[type="search"] {
+  border: none;
+  width: 80%;
+  height: 2em;
+  border-radius: 1em;
+  align-items: center;
+}
+
+.wineSearchbar input[placeholder="Search wines"] {
+  padding-left: 0.4em;
+}
+
+button.magnifier {
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  line-height: 0.2em;
+  width: 2.2em;
+  height: 2em;
+  border: 0.2em;
+  border-color: #990033;
+  border-radius: 50%;
+  background: #990033;
+  box-shadow: 0.2em 0.2em #55021e;
+  margin: 0.5em;
+}
+
+.nonnoVinoLogo {
+  order: 2;
+}
+
+.checkout {
+  color: #ffffff;
+  order: 3;
+}
+
+.checkout a {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.total {
+  font-weight: 500;
+  padding: 0 0.5em;
+}
+
+.checkout input[type="submit"] {
+  font-family: arial, bold;
+  background-color: #990033;
+  border: 0.2em solid #55021e;
+  border-radius: 2em;
+  padding: 0.2em;
+  width: 7em;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
   text-transform: uppercase;
-  line-height: 3.5em;
-  height: 1.2em;
+  transition: 0.4s;
+}
+
+.checkout input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #990033;
+  border: 0.2em solid #990033;
+  transition: 0.4s;
+}
+
+/* Styling the red navigation bar */
+nav {
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: #990033;
+  padding: 1em;
+  margin-top: 0.05em;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
 }
 
 nav a {
   text-decoration: none;
   color: #ffffff;
-  font-weight: 500;
 }
 
 nav a:hover {
@@ -115,47 +167,31 @@ nav a:hover {
   transition: 0.3s background-color;
 }
 
-/* Delivery ribbon */
-.ribbon1 {
+/* Gold FREE DELIVERY ribbon */
+.goldRibbon {
   display: inline-flex;
-  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-h3 {
+h3.goldRibbon {
   background-color: #b8860b;
   color: #ffffff;
   letter-spacing: 0.1em;
-  text-align: center;
   margin-top: -1px;
   height: 1.8em;
-  line-height: 1.8em;
+  padding: 0.5em;
 }
 
-/* Slider styling */
-#sliderContainer {
-  position: relative;
-}
-
-figure {
-  display: flex;
-}
-
-.sliderImg {
-  display: flex;
+/* Sliding imeage hero*/
+img.sliderImg {
+  display: block;
   max-width: 100%;
 }
 
-/* Bottons supposidly working at the bottom of the slider and changing colour according to image change
-.sliderBtn {
-  display: inline-flex;
-  height: 10px;
-  width: 10px;
-  border-radius: 5px;
-  background-color: white;
-}*/
-
 /* Wine type button row styling */
-#buttonContainer {
+.wineButtons {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -163,17 +199,17 @@ figure {
   align-items: center;
 }
 
-.wineTypeB {
+button.wineTypeB {
   background-color: #990033;
   border-color: #55021e;
   border-radius: 2em;
-  box-shadow: 1px 1px #55021e;
+  box-shadow: 0.2em 0.2em #55021e;
   color: #ffffff;
-  font-size: 0.8em;
+  font-size: 1rem;
   font-weight: 600;
-  height: 3em;
-  width: 19%;
-  margin: 9px 4px;
+  height: 2.2em;
+  width: 20%;
+  margin: 0.5em 0.5em 1em 0.5em;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -184,140 +220,118 @@ figure {
   border: 3px solid #990033;
   transition: 0.4s;
 }
-/* Three main containers */
-#wineContainers {
-  position: relative;
+/* Styling wine containers */
+
+main {
+  display: block;
+  margin: auto;
+  background-color: #fafad2;
+}
+
+/* Styling the  sections */
+
+.wineContainer {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   background-color: #fafad2;
   width: 100%;
 }
 
-/* Left Container 15% with internal styling */
-#leftContainer {
+.sidebarLx,
+.sidebarRx {
   display: flex;
   flex-direction: column;
-  width: 15%;
-  float: 1;
-}
-/* Webpage path styling */
-span.webLoc {
-  margin-top: 10px;
-  margin-left: 10px;
-  text-align: left;
-  text-decoration: underline;
-}
-
-span.webLoc p a {
-  color: blue;
-}
-
-/* Big central container 70% */
-#centralContainer {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
+  flex: 1.5;
+  background-color: #fafad2;
   align-items: center;
-  min-width: 70%;
   padding: 0;
-  box-shadow: 5px 5px 5px #f5f5f5;
-  float: 2;
 }
 
-/* Small container Right 15% */
-#rightContainer {
+.mainSection {
   display: flex;
   flex-direction: column;
-  align-items: right;
-  width: 15%;
-  margin-top: 0;
-  float: 1;
-}
-
-#innerCentralContainer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+  background-color: #ffffff;
+  flex: 7;
   align-items: center;
-  float: 1;
+  box-shadow: 5px 0 6px -6 #f5f5f5;
+  padding: 0;
 }
 
-/* Bestsellers section below */
-h1 {
+.bestSellers {
   display: flex;
-  justify-content: center;
   text-align: center;
-  font-size: 2.5em;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.sTitle {
+  display: flex;
+  font-size: 2.5rem;
   font-weight: 500;
   text-transform: capitalize;
-  padding: 30px;
+  padding: 1em;
 }
 
-h4 {
+.wineName,
+.producer {
   text-transform: capitalize;
 }
 
-.wineRow {
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
-  padding: 25px;
-  flex-flow: row;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
+.wineBottle1,
+.wineBottle2,
+.wineBottle3 {
+  max-width: 10em;
 }
 
-.wineBottle {
-  max-width: 200px;
-}
-
-.wineNameProd {
-  margin: 1em 1em;
-  padding: 5px;
+.hide {
+  color: #ffffff;
 }
 
 .priceButton {
-  margin-bottom: 0;
+  padding-top: 1em;
 }
 
 .price {
-  font-size: 1.4em;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
 .price,
 .size {
   display: inline-block;
-  padding-bottom: 5px;
 }
 
-.numberSub {
+.priceQuantity {
   display: block;
 }
 
 input[type="number"] {
   font-family: arial;
   text-align: right;
-  font-size: 0.8em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 40px;
-  height: 25px;
+  font-size: 0.8rem;
+  border: 0.1em solid #ccc;
+  border-radius: 0.4em;
+  width: 3.5em;
+  height: 2em;
 }
 
 input[type="submit"] {
   font-family: arial, bold;
   background-color: #990033;
-  border: 3px solid #55021e;
-  border-radius: 1em;
-  padding: 2px 5px;
-  width: 50px;
+  border: 0.2em solid #55021e;
+  border-radius: 2em;
+  padding: 0.25em 0.5em;
+  width: 4em;
   color: #ffffff;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
-  margin: 4px 2px;
+  margin: 1em 0.2em;
   cursor: pointer;
   text-transform: uppercase;
   transition: 0.4s;
@@ -326,129 +340,267 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #ffffff;
   color: #990033;
-  border: 3px solid #990033;
+  border: 0.2em solid #990033;
   transition: 0.4s;
 }
 
-/* Footer styling starts here */
+/* Styling the footer */
 footer {
   position: relative;
   display: block;
   bottom: 0;
 }
 
-#footerBttm {
+.blackFooter {
+  display: flex;
   background-color: #000000;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
   height: 9em;
   text-align: left;
   font-family: "Arial Narrow", Arial, sans-serif, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   padding: 2em 0;
   margin: 0 auto;
 }
 
-#footerBttm .col-left,
-#footerBttm .col-right {
-  display: block;
-  float: left;
+.footerColLx,
+.footerColRx {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
 }
 
-#footerBttm .col-left {
-  width: 80%;
+.footerColLx {
   color: #ffffff;
 }
 
-#footerBttm .col-left a {
+.footerColLx a {
   color: inherit;
   text-decoration: none;
   line-height: 1.8em;
   margin-left: 2.5em;
 }
 
-#footerBttm .col-right {
-  width: 20%;
-}
-
-.col-right .social,
-.col-right .col-rightBttm {
-  text-align: right;
+.footerColRxTop,
+.footerColRxBottom {
+  display: flex;
+  flex-direction: row;
   margin-right: 2.5em;
+  justify-content: flex-end;
+  height: 50%;
 }
 
-.social a i {
+.footerColRxTop a i {
   width: 1.3em;
   cursor: pointer;
-  border-radius: 2px;
-  font-size: 2em;
+  border-radius: 0.5em;
+  font-size: 2rem;
   color: #ffffff;
   text-align: center;
 }
 
-.col-rightBttm {
-  margin-top: 1.8em;
+.footerColRxBottom {
+  align-content: flex-end;
+  padding-top: 1.1em;
 }
 
-.col-rightBttm span {
-  display: inline;
+.footerColRxBottom span {
   color: #ffffff;
 }
 
-.col-rightBttm span a {
+.footerColRxBottom span a {
   color: #ffffff;
   font-weight: 800;
 }
-/* End of footer styling */
 
-/* Media Queries below */
+/* MEDIA QUERIES BELOW */
+
+/* Media queris for Tablet */
 @media screen and (max-width: 600px) {
-  .sliderImg {
-    max-width: 100%;
-  }
-
-  #wineContainers {
-    background-color: #ffffff;
-    text-align: center;
-    align-items: center;
-  }
-
-  #leftContainers {
+  .pageContent-flex,
+  .container-flex {
     display: flex;
-    flex-direction: row;
-    background-color: #ffffff;
-    top: 0;
-    max-width: 100%;
-    height: auto;
   }
 
-  #centralContainer {
+  .topBar {
     display: flex;
     flex-direction: column;
+  }
+
+  .blackBar {
+    flex-direction: column;
+    flex: 1;
+    padding: 1em;
     max-width: 100%;
-    box-shadow: none;
+  }
+
+  div.wineSearchbar {
+    flex: 1;
+    order: 2;
+    width: 100%;
+    padding: 1em;
+  }
+
+  div.nonnoVinoLogo {
+    flex: 1;
+    order: 1;
+    padding-top: 1em;
+  }
+
+  div.nonnoVinoLogo a {
+    display: flex;
+    align-items: center;
     justify-content: center;
   }
 
-  #rightContainer {
-    display: none;
-    width: 0;
+  .nonnoVinoLogo a img {
+    display: flex;
+    justify-content: space-evenly;
+    width: 120%;
   }
 
-  .wineRow {
-    display: flex;
+  nav {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li,
+  nav ul li,
+  nav ul li,
+  nav ul li {
+    display: inline-flex;
+    transition-delay: 0.1s;
+    white-space: nowrap;
     width: 100%;
-    margin-top: 20px;
-    padding: 25px;
-    flex-flow: column;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffffff;
+  }
+
+  nav ul li:hover,
+  nav ul li:hover,
+  nav ul li:hover,
+  nav ul li:hover {
+    background-color: rgb(248, 247, 246, 0.6);
+    border: none;
+  }
+
+  nav ul li a {
+    padding: 0.5em;
+  }
+
+  nav ul li a:hover {
+    color: #000000;
+    font-weight: 800;
+  }
+
+  .wineButtons {
+    flex-direction: column;
+    background-color: #fafad2;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  button.wineTypeB {
+    width: 95%;
+    font-size: 1.2rem;
+    margin: 0.3em 0.3em 0.6em 0.3em;
+  }
+
+  .sidebarLx,
+  .sidebarRx {
+    display: none;
+  }
+
+  .mainSection {
+    display: flex;
+    background-color: #ffffff;
+    width: 100%;
+    align-items: center;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .bestSellers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 
-  .wineBottle {
-    padding: 20px;
-    max-width: 300px;
-    text-align: center;
+  .sTitle {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 1em;
+  }
+
+  .wineBottle1,
+  .wineBottle2,
+  .wineBottle3 {
+    max-width: 50em;
+    max-height: 50em;
+  }
+
+  .dividerLine {
+    height: 2px;
+    width: 80%;
+    background-color: #f5f5f5;
+    margin: 2em;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .wineName,
+  .producer {
+    font-size: 1.2rem;
+  }
+
+  .blackFooter {
+    display: flex;
+    flex-direction: row;
+  }
+  .footerColLx,
+  .footerColRx {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerColRx {
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .footerColLx,
+  .footerColRx {
+    width: 50%;
+  }
+
+  .footerColRxTop,
+  .footerColRxBottom {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 450px) {
+  h3.goldRibbon {
+    display: none;
+  }
+
+  .footerColRxBottom span a {
+    font-weight: 400;
   }
 }
