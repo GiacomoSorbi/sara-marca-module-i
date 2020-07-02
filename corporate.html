@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NonnoVino Team" />
+    <title>About us</title>
+    <!-- CSS stylesheet linked below-->
+    <link href="css/corporatestyle.css" type="text/css" rel="stylesheet" />
+
+    <!--Links for favicon!-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="myimages/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="myimages/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="myimages/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="myimages/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="myimages/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="myimages/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="myimages/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="myimages/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="myimages/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="myimages/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="myimages/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="myimages/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="myimages/favicon-16x16.png"
+    />
+    <link rel="manifest" href="myimages/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="myimages/msapplication-TileImage"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!--Script to call fontawesome icons displayed in the footer-->
+    <script
+      src="https://kit.fontawesome.com/eb3c66bc02.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- page content wrapped into this div to improve accessibility -->
+    <div class="pageContent pageContext-flex">
+      <!-- the header consists of a black top bar + navigation bar + red ribbon with catch phrase -->
+      <header class="topBar">
+        <div class="blackBar">
+          <div class="nonnoVinoLogo">
+            <a href="./index.html"
+              ><img
+                class="logoTop"
+                src="myimages/Nonnovino200pxW.png"
+                alt="company logo"
+              />
+            </a>
+          </div>
+          <div class="wineSearchbar">
+            <form class="wineSearchBar">
+              <span class="screenReaderOnly">Wine searchbar</span>
+              <input
+                type="search"
+                name="winesearchbar"
+                placeholder="Search wines"
+                alt="Wine searchbar"
+                required
+              />
+              <button class="magnifier" alt="Search button">
+                <a><i class="fas fa-search"></i></a>
+              </button>
+            </form>
+          </div>
+          <div class="checkout">
+            <span>
+              <a href="#"><i class="fas fa-shopping-cart"></i></a>
+              <span class="total">£0.00</span>
+              <input type="submit" value="Checkout" />
+            </span>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li class="offers">
+              <a href="#" onclick="return page_unavailable(this);">Offers</a>
+            </li>
+            <li class="wineSel"><a href="./winesel.html">Buy Wine</a></li>
+            <li class="nonnoSpec">
+              <a href="#" onclick="return page_unavailable(this)"
+                >Our Specials</a
+              >
+            </li>
+            <li class="askNonno"><a href="./asknonno.html">Ask Nonno</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="container container-flex">
+        <main role="main">
+          <!-- anchor links to the current page-->
+          <div class="pageLink">
+            <span class="aPageLink"
+              ><a href="./index.html">HOME></a
+              ><a href="./corporate.html">ABOUT US</a></span
+            >
+          </div>
+          <h1 class="sTitle">MEET THE TEAM</h1>
+          <!-- Main section with team Intro -->
+          <section class="mainSection">
+            <article class="mainArticle">
+              <div class="teamIntro">
+                <figure class="photoArticle">
+                  <img
+                    src="myimages/groupPhotounsplash.jpg"
+                    alt="group of people enjoying a glass of wine"
+                  /><a href="corporate.html"></a>
+                </figure>
+                <p class="twoColText">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                  quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                  consequuntur magni dolores eos qui ratione voluptatem sequi
+                  nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
+                  dolor sit amet, consectetur, adipisci velit, sed quia non
+                  numquam eius modi tempora incidunt ut labore et dolore magnam
+                  aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                  nostrum exercitationem ullam corporis suscipit laboriosam,
+                  nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
+                  iure reprehenderit qui in ea voluptate velit esse quam nihil
+                  molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                  voluptas nulla pariatur? At vero eos et accusamus et iusto
+                  odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                  deleniti atque corrupti quos dolores et quas molestias
+                  excepturi sint occaecati cupiditate non provident, similique
+                  sunt in culpa.
+                </p>
+              </div>
+            </article>
+            <article class="sideArticle">
+              <div class="teamMemberList">
+                <!-- Alex Grillo Row -->
+                <div class="teamBox">
+                  <div class="teamContent">
+                    <h4 class="tName">ALEX GRILLO</h4>
+                    <br />
+                    <h4 class="tRole">Founder and MD</h4>
+                    <br />
+                    <p class="twineQ">Favourite wine:</p>
+                    <br />
+                    <p class="twineA">
+                      Amarone della Valpolicella by Allegrini
+                    </p>
+                    <br />
+                    <a href="#" class="learnMore">Click to learn more</a>
+                  </div>
+                  <div class="teamImage">
+                    <img
+                      src="myimages/Alex-square120px.png"
+                      alt="Black man with sunglasses"
+                    /><a href="corporate.html"></a>
+                  </div>
+                </div>
+                <!-- Amy Torrontel Row -->
+                <div class="teamBox">
+                  <div class="teamContent">
+                    <h4 class="tName">AMY TORRONTEL</h4>
+                    <br />
+                    <h4 class="tRole">Client Success Director</h4>
+                    <br />
+                    <p class="twineQ">Favourite wine:</p>
+                    <br />
+                    <p class="twineA">
+                      Sassoalloro by Biondi Santi
+                    </p>
+                    <br />
+                    <a href="#" class="learnMore">Click to learn more</a>
+                  </div>
+                  <div class="teamImage">
+                    <img
+                      src="myimages/amy-hirschi-square120px.png"
+                      alt="White lady with dark hair"
+                    /><a href="corporate.html"></a>
+                  </div>
+                </div>
+                <!-- Sylvia Tocaji Row -->
+                <div class="teamBox">
+                  <div class="teamContent">
+                    <h4 class="tName">SYLVIA TOCAJI</h4>
+                    <br />
+                    <h4 class="tRole">Digital Strategist</h4>
+                    <br />
+                    <p class="twineQ">Favourite wine:</p>
+                    <br />
+                    <p class="twineA">
+                      Friulano Friuli by Vigna Traverso
+                    </p>
+                    <br />
+                    <a href="#" class="learnMore">Click to learn more</a>
+                  </div>
+                  <div class="teamImage">
+                    <img
+                      src="myimages/Silvia-square120px.png"
+                      alt="blond woman gazing at glass of wine"
+                    /><a href="corporate.html"></a>
+                  </div>
+                </div>
+                <!-- Juno Traminer Row -->
+                <div class="teamBox">
+                  <div class="teamContent">
+                    <h4 class="tName">JUNO TRAMINER</h4>
+                    <br />
+                    <h4 class="tRole">Logistics Team Leader</h4>
+                    <br />
+                    <p class="twineQ">Favourite wine:</p>
+                    <br />
+                    <p class="twineA">
+                      Pinot Nero by Vallarom
+                    </p>
+                    <br />
+                    <a href="#" class="learnMore">Click to learn more</a>
+                  </div>
+                  <div class="teamImage">
+                    <img
+                      src="myimages/Juno-square120px.png"
+                      alt="white bearded man with glass"
+                    /><a href="corporate.html"></a>
+                  </div>
+                </div>
+                <!-- Jess Fungrape Row -->
+                <div class="teamBox">
+                  <div class="teamContent">
+                    <h4 class="tName">JESS FUNGRAPE</h4>
+                    <br />
+                    <h4 class="tRole">Customer Service Team Leader</h4>
+                    <br />
+                    <p class="twineQ">Favourite wine:</p>
+                    <br />
+                    <p class="twineA">
+                      Rosé Glamour by Antonini Ceresa
+                    </p>
+                    <br />
+                    <a href="#" class="learnMore">Click to learn more</a>
+                  </div>
+                  <div class="teamImage">
+                    <img
+                      src="myimages/Julie-square120px.png"
+                      alt="smiling brunette woman"
+                    /><a href="corporate.html"></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
+      <!-- Footer goes below  -->
+      <footer class="blackFooter">
+        <div class="footerColLx">
+          <ul>
+            <li><a href="corporate.html">ABOUT US</a></li>
+            <li>
+              <a href="#" onclick="return page_unavailable(this);"
+                >USEFUL INFO</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="return page_unavailable(this);">CAREERS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footerColRx">
+          <div class="footerColRxTop">
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+          </div>
+          <div class="footerColRxBottom">
+            <span
+              >For the facts
+              <a href="https://drinkaware.co.uk/" target="_blank"
+                >Drinkaware.co.uk</a
+              ></span
+            >
+          </div>
+        </div>
+      </footer>
+      <script src="style.js"></script>
+    </div>
+  </body>
+</html>
