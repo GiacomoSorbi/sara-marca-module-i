@@ -294,6 +294,7 @@ span.max {
 .wineName,
 .producer {
   text-align: center;
+  font-size: 1rem;
 }
 
 .wineBottle > .priceContainer {
@@ -321,7 +322,7 @@ input[type="number"] {
   height: 2em;
 }
 
-input[type="submit"] {
+.addB {
   font-family: arial, bold;
   background-color: #990033;
   border: 0.2em solid #55021e;
@@ -338,7 +339,7 @@ input[type="submit"] {
   transition: 0.4s;
 }
 
-input[type="submit"]:hover {
+.addB:hover {
   background-color: #ffffff;
   color: #990033;
   border: 0.2em solid #990033;
