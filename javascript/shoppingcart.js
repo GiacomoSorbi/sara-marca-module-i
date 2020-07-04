@@ -1,11 +1,3 @@
-// message on `li a href` without pages //
-function page_unavailable(node) {
-  return alert(
-    "Sorry, this page is currently under construction. Thanks for your patience."
-  );
-}
-
-// SHOPPING CART //
 const addCartBtns = document.querySelectorAll(".addB");
 const cart = [];
 const cartContainer = document.querySelector(".shopList");
@@ -28,11 +20,11 @@ const updateCart = () => {
     <button type="reset" id="resBtn">X</button>
     </div>
     <div>`;
-    // this function creates the new element `el` directly inside the cart container //
+
     cartContainer.appendChild(el);
   });
 
-  // Update Cart Item Quantity //
+  //Update Cart Item Quantity//
 };
 const addHandler = (event) => {
   const productImage = event.target.parentElement.querySelector(".wineImg").src;
@@ -60,10 +52,8 @@ for (let i = 0; i < addCartBtns.length; i++) {
   addCartBtns[i].onclick = addHandler;
 }
 
-// remove cart items
-
-/*Update cart total 
-      function updateCartTotal()
+//Update cart total//
+/*function updateCartTotal()
       const totalAmount = [];
       const totalDisplay = document.querySelector(".totalPrice");
       totalAmount.forEach(function(item){
@@ -87,6 +77,7 @@ for (let i = 0; i < addCartBtns.length; i++) {
       updateCartTotal();
     };*/
 
+//remove cart items//
 const ResBtn = document.querySelectorAll("#resBtn");
 for (let i = 0; i < ResBtn.length; i++) {
   const clicked = ResBtn[i];
@@ -94,29 +85,3 @@ for (let i = 0; i < ResBtn.length; i++) {
     console.log("clicked");
   });
 }
-
-/* // Javascript bit for the slider in the homepage (index.html)
-that never worked //
-  let i = 0;
-  const slides= [];
-  const time = 3000;
-
-  slides [0] = "images/Offer1Slider.jpg";
-  slides [1] = "images/Offer2Slider.jpg";
-  slides [2] = "images/Offer3Slider.jpg";
-
-  const sliderS = document.querySelector(".slider")
-
-  function slideShow(){
-    const slides1 = document.sliderS = slides[i];
-    if(i < slides1.length -1){
-      i++;
-    } else {
-      i = 0;
-    }
-    // Runs function every x seconds as per const time//
-    setTimeout("slideShow()", time);
-  }
-
-  //Run function when page loads//
-  window.onload = slideShow;*/
