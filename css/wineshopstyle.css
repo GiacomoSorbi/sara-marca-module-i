@@ -175,19 +175,32 @@ nav a:hover {
   flex-wrap: wrap;
   background-color: #fafad2;
   width: 100%;
+  justify-content: center;
 }
 
-.sidebarLx,
+.sidebarLx {
+  display: flex;
+  flex-flow: column wrap;
+  align-self: flex-start;
+  width: 15%;
+  background-color: #fafad2;
+
+  margin: 0;
+  padding: 0;
+}
+
 .sidebarRx {
   display: flex;
-  flex-direction: column;
-  flex: 1.5;
+  flex-flow: column wrap;
+  width: 15%;
   background-color: #fafad2;
+  margin-top: 0;
+}
+/* Styling inner sidebarLx with filter criteria */
+.contactBox {
+  display: flex;
   padding: 1em;
 }
-
-/* Styling inner sidebarLx with filter criteria */
-
 .pageLink {
   padding: 0.5em;
 }
@@ -200,20 +213,20 @@ span.aPageLink {
   font-size: 0.9rem;
 }
 
-.filtersContainer {
+.filterFormContainer {
   align-items: center;
   justify-content: center;
+  padding: 0.5em 0;
 }
-
 p.textF {
-  display: block;
+  padding-bottom: 0.5em;
 }
 
 span.filter,
 span.clear {
   color: #2c2c2c;
   font-size: 0.7em;
-  padding-top: 0.5em;
+  padding: 0 1em;
 }
 
 span.filter {
@@ -224,14 +237,17 @@ span.clear {
   float: right;
 }
 
-.solidLine {
-  margin-top: 1.2em;
-  border: 1px solid #2c2c2c;
-  margin-bottom: 0.8em;
+hr.solidLine {
+  border-top: 1px solid #2c2c2c;
+  text-align: center;
+  transform: translateY(0.3em);
+  width: 100%;
 }
 
 form.filterForm {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .filterRow {
@@ -258,22 +274,19 @@ span.max {
 /* Styling the main section*/
 .mainSection {
   display: flex;
-  flex-direction: column;
-  margin: 0;
+  flex-flow: column wrap;
+  min-width: 70%;
   background-color: #ffffff;
-  flex: 7;
-  align-items: center;
   box-shadow: 5px 0 6px -6px #f5f5f5;
   padding: 0;
+  margin: 0;
 }
 
-.wineRow1,
-.wineRow2,
-.wineRow3 {
+.wineRow {
   display: flex;
+  flex-flow: row;
   width: 100%;
   padding: 2em 1em;
-  flex-flow: row;
   align-items: center;
   justify-content: space-between;
 }
@@ -352,7 +365,7 @@ input[type="number"] {
   flex-direction: column;
   width: 100%;
   justify-content: space-evenly;
-  padding: 20px;
+  padding: 2em;
 }
 
 .dottedLine {
@@ -364,6 +377,7 @@ input[type="number"] {
 }
 
 h2 {
+  display: inline-flex;
   color: #990033;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -371,7 +385,6 @@ h2 {
   text-transform: uppercase;
   margin: auto;
   text-align: center;
-  display: inline-flex;
 }
 
 h5 {
@@ -383,12 +396,16 @@ h5 {
   display: flex;
   flex-flow: inline-flex;
   justify-content: space-evenly;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 }
 
 .shopList {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 /* Visible only when there is at least one item into the cart */
@@ -396,50 +413,44 @@ h5 {
   position: relative;
   display: inline-flex;
   width: 100%;
-  top: 50%;
+  padding: 0.5em;
   justify-content: space-evenly;
+  align-items: center;
   border-bottom: 1px dashed #990033;
 }
 
 .shopWineImg {
-  display: flex;
-  width: 50%;
-  top: 50%;
-  padding-bottom: 10px;
-  margin-top: 10px;
-  text-align: left;
-  align-items: center;
+  max-width: 100%;
+  height: 4em;
+  margin-top: 0.5em;
+  padding-right: 0.5em;
+}
+
+span.shopWineName {
+  display: inline-flex;
+  font-size: 1.5rem;
+  transform: translateY(-1em);
 }
 
 .shopPrice {
   display: inline-flex;
-  width: 20%;
   font-size: 1.5em;
-  align-items: center;
-  justify-items: center;
-  transform: translateX(-65px);
 }
 
 .shopQuantity {
-  max-width: 50px;
-  height: 15px;
+  max-width: 4em;
+  height: 1em;
   border-radius: 4px;
 }
 
 .shopQuantityReset {
   position: relative;
   display: inline-flex;
-  top: 50%;
   align-items: center;
-  transform: translateX(-40px);
+  transform: translateX(1em);
 }
 
-.shopWineName {
-  margin-left: 0.5em;
-  font-size: 1.5em;
-}
-
-#resetBtn {
+.resBtn {
   display: block;
   height: 25px;
   width: 25px;
@@ -458,7 +469,7 @@ h5 {
   transition: 0.4s;
 }
 
-#resetBtn:hover {
+.resBtn:hover {
   background-color: #ffffff;
   font-family: arial;
   font-weight: bold;
@@ -484,7 +495,7 @@ h5 {
 }
 
 .checkoutBottom {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -587,7 +598,7 @@ footer {
 
 /* MEDIA QUERIES BELOW */
 
-@media screen and (max-width: 965px) {
+@media screen and (max-width: 1000px) {
   .pageLink {
     display: none;
   }
@@ -602,6 +613,7 @@ footer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 100%;
     box-shadow: none;
     padding: 0;
   }
@@ -613,6 +625,7 @@ footer {
   .sidebarLx {
     display: flex;
     flex-direction: row;
+    width: 100%;
   }
 
   p.textF,
@@ -749,23 +762,24 @@ footer {
     box-shadow: none;
     padding: 0;
   }
-  .wineRow1,
-  .wineRow2,
-  .wineRow3 {
+
+  .wineRow {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
 
   .wineBottle {
-    max-width: 100%;
-    max-height: 50em;
+    max-width: 50%;
+    max-height: 30em;
   }
 
   .dividerLine {
     height: 2px;
     width: 80%;
     background-color: #f5f5f5;
-    margin: 2em;
+    margin: 1em 2em;
   }
 
   .hide {
@@ -774,7 +788,7 @@ footer {
 
   .wineName,
   .producer {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .blackFooter {
